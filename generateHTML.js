@@ -34,7 +34,6 @@ const colors = {
 };
 
 function generateHTML(data) {
-  console.log(colors[data.color]);
 
   return `<!DOCTYPE html>
   <html lang="en">
@@ -200,18 +199,17 @@ function generateHTML(data) {
     <div class="container">
         <h4>${data.apiResults.data.bio}</h4>
 
-        <div class="card">Public Repos:<br>${data.apiResults.data.public_repos}</div>
+        <div class="card row col">Public Repos:<br>${data.apiResults.data.public_repos}</div>
 
-        <div class="card">Followers:<br>${data.apiResults.data.followers}</div>
+        <div class="card row col">Followers:<br>${data.apiResults.data.followers}</div>
 
-        <div class="card">Following:<br>${data.apiResults.data.following}</div>
+        <div class="card row col">Following:<br>${data.apiResults.data.following}</div>
 
-        <div class="card">Starred:<br></div>
+        <div class="card row col">Starred:<br></div>
 
 </body>
 
-</html>
-        
+</html>    
         `
 }
 module.exports = generateHTML

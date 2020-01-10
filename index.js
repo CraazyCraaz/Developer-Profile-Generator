@@ -44,8 +44,6 @@ function getGitHubUserInfo(username, color) {
       color: color
     }
 
-    console.log(generateHTML(data));
-
     let userData = generateHTML(data)
 
     fs.writeFile("devProfile.html", userData, function (err) {
@@ -55,40 +53,8 @@ function getGitHubUserInfo(username, color) {
       console.log("Success!");
 
     })
-
   })
 };
-
-
-
-// public repos
-// res.data.public_repos
-
-// followers
-// res.data.followers
-
-// stars requires seperate api call?
-//https://api.github.com/users/${username}/starred
-//res.data.length
-
-// following
-// res.data.following
-
-// });
-
-
-// turn into async await
-
-
-
-function writeToFile(fileName, data) {
-  fs.writeFile("devProfile.html", generateHTML(data), (err) => {
-    if (err) throw err;
-    console.log('Success!');
-  });
-
-};
-
 
 init();
 
