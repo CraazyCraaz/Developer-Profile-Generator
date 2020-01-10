@@ -59,23 +59,7 @@ function getGitHubUserInfo(username, color) {
   })
 };
 
-// github profile image
-// res.data.avatar_url
 
-// users name (real name)
-// res.data.name
-
-// location
-// res.data.location
-
-// github profile link
-// res.data.html_url
-
-// linkedin
-// res.data.blog
-
-// bio
-// res.data.bio
 
 // public repos
 // res.data.public_repos

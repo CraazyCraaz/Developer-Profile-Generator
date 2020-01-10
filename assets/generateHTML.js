@@ -185,14 +185,28 @@ function generateHTML(data) {
 
 <body>
 
-    <div class="container wrapper">
+<div class="container">
         <div class="photo-header">
             <img src="${data.apiResults.data.avatar_url}" alt="Devs beautiful photo">
             <h1>Hi!</h1>
             <h2>My name is ${data.apiResults.data.name}</h2>
-
+            <nav class="links-nav">
+                <a class="nav-link" href="${data.apiResults.data.html_url}">GitHub</a>
+                <a class="nav-link" href="${data.apiResults.data.location}">${data.apiResults.data.location}</a>
+                <a class="nav-link" href="${data.apiResults.data.blog}">LinkedIn</a>
+            </nav>
         </div>
     </div>
+    <div class="container">
+        <h4>${data.apiResults.data.bio}</h4>
+
+        <div class="card">Public Repos:<br>${data.apiResults.data.public_repos}</div>
+
+        <div class="card">Followers:<br>${data.apiResults.data.followers}</div>
+
+        <div class="card">Following:<br>${data.apiResults.data.following}</div>
+
+        <div class="card">Starred:<br></div>
 
 </body>
 
